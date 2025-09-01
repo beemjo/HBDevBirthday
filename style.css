@@ -1,0 +1,45 @@
+/* Background & HBdev letters */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: black;
+    font-family: 'Courier New', monospace;
+}
+
+/* Popup message */
+.popup {
+    position: absolute;
+    bottom: -100px; /* start below screen */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 40px;
+    background-color: black;
+    color: #00FF00;
+    font-size: 2em;
+    text-align: center;
+    border: 2px solid #00FF00;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00FF00;
+    z-index: 20;
+    opacity: 0;
+    transition: bottom 2s ease, transform 2s ease, opacity 1s ease;
+}
+
+/* When active */
+.popup.show {
+    bottom: 50%; /* move to center */
+    transform: translateX(-50%) translateY(50%);
+    opacity: 1;
+}
+
+/* Particles */
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #00FF00;
+    border-radius: 50%;
+    pointer-events: none;
+}
